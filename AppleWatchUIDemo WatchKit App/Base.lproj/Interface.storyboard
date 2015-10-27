@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="BreeSerif-Regular.otf">
+            <string>BreeSerif-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <table alignment="left" id="JXY-hr-ttD">
+                            <items>
+                                <tableRow identifier="SingleLabelTableRow" id="aIE-Af-pe2" customClass="SingleLabelTableRow">
+                                    <group key="rootItem" width="1" alignment="left" id="6Me-AI-glD">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" id="I9J-wA-V1K"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="I9J-wA-V1K" id="WAn-kR-I7W"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="optionsTable" destination="JXY-hr-ttD" id="YuH-ly-xGa"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--ButtonsIdentifier-->
+        <scene sceneID="eqM-eH-s7m">
+            <objects>
+                <controller identifier="ButtonsIdentifier" hidesWhenLoading="NO" id="uaq-9M-B53" customClass="ButtonsInterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Show More" id="UpA-4K-QEG">
+                            <connections>
+                                <action selector="showMorePressed" destination="uaq-9M-B53" id="gbN-5E-Qsu"/>
+                            </connections>
+                        </button>
+                        <button alignment="left" id="Kof-vN-6hh">
+                            <group key="contentGroup" width="1" alignment="left" layout="vertical" id="byB-ub-eqC">
+                                <items>
+                                    <label alignment="center" text="Current time" id="nQz-V5-Uej"/>
+                                    <dateLabel alignment="center" verticalAlignment="bottom" id="nkc-ex-N5z">
+                                        <dateFormatterStyle key="dateStyle" short="YES"/>
+                                        <dateFormatterStyle key="timeStyle" short="YES"/>
+                                    </dateLabel>
+                                </items>
+                            </group>
+                            <connections>
+                                <action selector="groupPressed" destination="uaq-9M-B53" id="dax-1e-6ga"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Show Even More" id="XY9-2Y-2p4">
+                            <connections>
+                                <action selector="showEvenMorePressed" destination="uaq-9M-B53" id="2dD-yX-kcf"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="groupButton" destination="Kof-vN-6hh" id="Bjp-jF-FD0"/>
+                        <outlet property="showEvenMoreButton" destination="XY9-2Y-2p4" id="7gB-vH-tn3"/>
+                        <outlet property="showMoreButton" destination="UpA-4K-QEG" id="hLr-JQ-X7c"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="470" y="155"/>
+        </scene>
+        <!--LabelsIdentifier-->
+        <scene sceneID="p29-2Z-7Vl">
+            <objects>
+                <controller identifier="LabelsIdentifier" hidesWhenLoading="NO" id="ueq-4g-hwi" customClass="LabelsInterfaceController">
+                    <items>
+                        <label alignment="left" text="Left" id="6Qh-Xa-cYc"/>
+                        <label alignment="center" text="Center" id="qBf-0p-q4W"/>
+                        <label alignment="right" text="Right" id="gGP-9v-JfU"/>
+                        <label alignment="center" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textAlignment="center" numberOfLines="0" id="MIZ-21-v29">
+                            <fontDescription key="font" name="BreeSerif-Regular" family="Bree Serif" pointSize="14"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="bottom" text="Bottom" textAlignment="center" id="G69-sC-7MM"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="639" y="156"/>
+        </scene>
+        <!--SwitchesIdentifier-->
+        <scene sceneID="kyo-gC-QRV">
+            <objects>
+                <controller identifier="SwitchesIdentifier" hidesWhenLoading="NO" id="91e-wt-nsa" customClass="SwitchesInterfaceController">
+                    <items>
+                        <switch width="1" alignment="left" title="Like Art?" id="Prr-Yd-aud">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                            <connections>
+                                <action selector="artSwitchChanged:" destination="91e-wt-nsa" id="LVg-9F-XBG"/>
+                            </connections>
+                        </switch>
+                        <label alignment="center" numberOfLines="0" id="coD-rx-EG0"/>
+                    </items>
+                    <connections>
+                        <outlet property="artSwitch" destination="Prr-Yd-aud" id="iV1-y0-50f"/>
+                        <outlet property="responseLabel" destination="coD-rx-EG0" id="KXf-4m-igN"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="813" y="159"/>
+        </scene>
+        <!--ImagesIdentifier-->
+        <scene sceneID="7UU-02-U0M">
+            <objects>
+                <controller identifier="ImagesIdentifier" hidesWhenLoading="NO" id="Asg-Zy-zXn" customClass="ImagesInterfaceController">
+                    <items>
+                        <button alignment="left" id="ecC-sX-JiW">
+                            <group key="contentGroup" width="1" alignment="left" layout="vertical" id="HJy-kT-wIh">
+                                <items>
+                                    <imageView alignment="center" image="pato_0" id="sKx-K1-GLu"/>
+                                    <imageView alignment="center" image="pato_1" id="voO-JT-Wp7"/>
+                                    <imageView alignment="center" image="pato_2" id="fNI-WO-8dW"/>
+                                </items>
+                            </group>
+                            <connections>
+                                <segue destination="PVr-XE-pml" kind="modal" id="e9z-SZ-yE2"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="639" y="524.25"/>
+        </scene>
+        <!--Close-->
+        <scene sceneID="Cd4-N9-433">
+            <objects>
+                <controller title="Close" hidesWhenLoading="NO" id="PVr-XE-pml">
+                    <items>
+                        <imageView alignment="center" verticalAlignment="center" image="pato_0" id="For-x7-Qtv"/>
+                    </items>
+                    <connections>
+                        <segue destination="aJx-0q-Jcd" kind="relationship" relationship="nextPage" id="htX-dr-5yD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="886" y="481"/>
+        </scene>
+        <!--Close-->
+        <scene sceneID="xgY-is-hrb">
+            <objects>
+                <controller title="Close" hidesWhenLoading="NO" id="aJx-0q-Jcd">
+                    <items>
+                        <imageView alignment="center" verticalAlignment="center" image="pato_1" id="nAi-l6-unT"/>
+                    </items>
+                    <connections>
+                        <segue destination="cF1-0P-xPg" kind="relationship" relationship="nextPage" id="s6g-Uq-ZVu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1106" y="481"/>
+        </scene>
+        <!--Close-->
+        <scene sceneID="iq7-Fe-cge">
+            <objects>
+                <controller title="Close" hidesWhenLoading="NO" id="cF1-0P-xPg">
+                    <items>
+                        <imageView alignment="center" verticalAlignment="center" image="pato_2" id="hff-gh-y1L"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1295" y="481"/>
+        </scene>
+        <!--SlidersIdentifier-->
+        <scene sceneID="Pl4-ga-g3d">
+            <objects>
+                <controller identifier="SlidersIdentifier" hidesWhenLoading="NO" id="hKK-SF-VhI" customClass="SlidersInterfaceController">
+                    <items>
+                        <slider width="1" alignment="left" value="4" maximum="10" steps="5" minimumImage="zoom-out" maximumImage="zoom-in" id="Wrs-AX-rCY">
+                            <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="sliderChanged:" destination="hKK-SF-VhI" id="kcE-8b-HJ6"/>
+                            </connections>
+                        </slider>
+                        <group width="1" alignment="center" radius="3" id="Emj-wE-pRZ">
+                            <items>
+                                <label alignment="center" text="Value:" id="Zze-sJ-hbe">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                                <label alignment="center" text="0" id="aXA-MA-LuT"/>
+                            </items>
+                            <color key="backgroundColor" red="0.22472974934847376" green="0.21988032665236237" blue="0.28401686904646462" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="4" bottom="4"/>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" red="0.41596538115244897" green="0.40350353389942933" blue="0.54257539200662364" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="valueLabel" destination="aXA-MA-LuT" id="MsE-gn-Uvw"/>
+                        <outlet property="valueSlider" destination="Wrs-AX-rCY" id="9W4-8g-6fk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="387"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
